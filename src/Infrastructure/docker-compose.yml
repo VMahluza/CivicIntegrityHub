@@ -23,6 +23,10 @@ services:
       - ./initdb:/docker-entrypoint-initdb.d:ro
     networks:
       - civic-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 3s
+      retries: 10
 
   api:
     build:
@@ -37,7 +41,8 @@ services:
     ports:
       - "5000:80"
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
     networks:
       - civic-network
 

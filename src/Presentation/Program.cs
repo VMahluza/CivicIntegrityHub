@@ -10,16 +10,28 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// Enable Swagger in all environments for testing (remove condition)
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+// Add a root endpoint
+app.MapGet("/", () => Results.Ok(new
+{
+    Service = "Civic Integrity Hub API",
+    Version = "1.0.0",
+    Status = "Running",
+    Endpoints = new[]
+    {
+        "/swagger",
+        "/api/health",
+        "/api/health/connection"
+    }
+}));
 
 app.Run();
