@@ -361,3 +361,25 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Environment variables
+.env
+**/.env
+
+# User secrets
+appsettings.Development.json
+src/Presentation/appsettings.Development.json
+
+# Never commit connection strings with passwords
+**/appsettings.*.json
+!**/appsettings.json
+
+# IDE and build artifacts
+.vs/
+.vscode/
+bin/
+obj/
+*.user
+*.suo
+/src/Infrastructure/.env
+/src/Presentation/appsettings.Development.json
