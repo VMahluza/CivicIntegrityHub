@@ -1,41 +1,39 @@
-# PublicCorruptionReportingPlatform
+# 🏛️ Civic Integrity Hub API
 
 This repository hosts the Civic Integrity Hub API, an initiative to empower citizens in reporting and combating public sector corruption.
 
 ## Table of Contents
 
-- [??? Civic Integrity Hub API](#-civic-integrity-hub-api)
+- [🏛️ Civic Integrity Hub API](#️-civic-integrity-hub-api)
   - [Description](#description)
   - [Badges](#badges)
-- [?? Quick Start](#-quick-start)
+- [🚀 Quick Start](#-quick-start)
   - [Option 1: Run with Docker (Recommended)](#option-1-run-with-docker-recommended)
   - [Option 2: Run Locally (Development)](#option-2-run-locally-development)
-- [??? Project Structure](#-project-structure)
-- [?? Configuration](#-configuration)
+- [📁 Project Structure](#-project-structure)
+- [⚙️ Configuration](#️-configuration)
   - [Environment Variables](#environment-variables)
   - [Connection Strings](#connection-strings)
-- [?? API Endpoints](#-api-endpoints)
-- [?? Docker Commands](#-docker-commands)
-- [??? Development](#-development)
-- [?? Troubleshooting](#-troubleshooting)
-- [?? Testing the API](#-testing-the-api)
-- [?? Contributing](#-contributing)
-- [?? Development Roadmap](#-development-roadmap)
-- [?? Additional Resources](#-additional-resources)
-- [?? License](#-license)
-- [?? Contact](#-contact)
-- [?? Acknowledgments](#-acknowledgments)
-- [? Support](#-support)
+- [🔌 API Endpoints](#-api-endpoints)
+- [🐳 Docker Commands](#-docker-commands)
+- [💻 Development](#-development)
+- [🔧 Troubleshooting](#-troubleshooting)
+- [🧪 Testing the API](#-testing-the-api)
+- [🤝 Contributing](#-contributing)
+- [🗓️ Development Roadmap](#️-development-roadmap)
+- [📚 Additional Resources](#-additional-resources)
+- [📄 License](#-license)
+- [📧 Contact](#-contact)
+- [🙏 Acknowledgments](#-acknowledgments)
+- [⭐ Support](#-support)
 
 ---
 
-## ??? Civic Integrity Hub API
-
-### Description
+## Description
 
 A citizen-focused ASP.NET Core Web API designed to combat public sector corruption by enabling secure reporting, case tracking, and transparency.
 
-### Badges
+## Badges
 
 [![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4)](https://dotnet.microsoft.com/)
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED)](https://www.docker.com/)
@@ -43,7 +41,7 @@ A citizen-focused ASP.NET Core Web API designed to combat public sector corrupti
 
 ---
 
-## ?? Quick Start
+## 🚀 Quick Start
 
 ### Option 1: Run with Docker (Recommended)
 
@@ -51,8 +49,8 @@ This is the easiest way to get started. Docker will handle all dependencies incl
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/VMahluza/CivicIntegrityHub.git
-   cd CivicIntegrityHub
+   git clone https://github.com/VMahluza/PublicCorruptionReportingPlatform.git
+   cd PublicCorruptionReportingPlatform
    ```
 
 2. **Navigate to the Infrastructure directory:**
@@ -94,8 +92,8 @@ For local development without Docker:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/VMahluza/CivicIntegrityHub.git
-   cd CivicIntegrityHub
+   git clone https://github.com/VMahluza/PublicCorruptionReportingPlatform.git
+   cd PublicCorruptionReportingPlatform
    ```
 
 2. **Set up MySQL database:**
@@ -129,37 +127,37 @@ For local development without Docker:
 
 ---
 
-## ??? Project Structure
+## 📁 Project Structure
 
 ```
-CivicIntegrityHub/
-+-- src/
-�   +-- Presentation/           # ASP.NET Core Web API (Entry Point)
-�   �   +-- Controllers/        # API Controllers
-�   �   �   +-- HealthController.cs
-�   �   �   +-- WeatherForecastController.cs
-�   �   +-- Program.cs          # Application startup
-�   �   +-- appsettings.json    # Production configuration
-�   �   +-- appsettings.Development.json
-�   �   +-- Dockerfile          # Docker configuration
-�   �
-�   +-- Application/            # Business logic layer
-�   +-- Domain/                 # Domain models & entities
-�   +-- Infrastructure/         # Data access & external services
-�   �   +-- docker-compose.yml  # Docker orchestration
-�   �   +-- .env                # Environment variables
-�   �   +-- initdb/             # Database initialization scripts
-�   �       +-- 001_seed.sql
-�   �
-�   +-- Tests/                  # Unit & integration tests
-�
-+-- ProblemStatement.md         # Project overview & roadmap
-+-- README.md                   # This file
+PublicCorruptionReportingPlatform/
+├── src/
+│   ├── Presentation/           # ASP.NET Core Web API (Entry Point)
+│   │   ├── Controllers/        # API Controllers
+│   │   │   ├── HealthController.cs
+│   │   │   └── WeatherForecastController.cs
+│   │   ├── Program.cs          # Application startup
+│   │   ├── appsettings.json    # Production configuration
+│   │   ├── appsettings.Development.json
+│   │   └── Dockerfile          # Docker configuration
+│   │
+│   ├── Application/            # Business logic layer
+│   ├── Domain/                 # Domain models & entities
+│   ├── Infrastructure/         # Data access & external services
+│   │   ├── docker-compose.yml  # Docker orchestration
+│   │   ├── .env                # Environment variables
+│   │   └── initdb/             # Database initialization scripts
+│   │       └── 001_seed.sql
+│   │
+│   └── Tests/                  # Unit & integration tests
+│
+├── ProblemStatement.md         # Project overview & roadmap
+└── README.md                   # This file
 ```
 
 ---
 
-## ?? Configuration
+## ⚙️ Configuration
 
 ### Environment Variables
 
@@ -173,7 +171,7 @@ MYSQL_PASSWORD=12345StrongPwd!
 MYSQL_PORT=3306
 ```
 
-?? **Security Note:** 
+🔒 **Security Note:** 
 - The `.env` file is gitignored and should never be committed to version control
 - Use proper secret management in production (Azure Key Vault, AWS Secrets Manager, etc.)
 - Change default passwords before deploying to production
@@ -197,7 +195,7 @@ ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=civic_integ
 
 ---
 
-## ?? API Endpoints
+## 🔌 API Endpoints
 
 ### Root Endpoint
 ```http
@@ -260,7 +258,7 @@ Visit `/swagger` for interactive API documentation powered by Swagger/OpenAPI.
 
 ---
 
-## ?? Docker Commands
+## 🐳 Docker Commands
 
 ### Build and Start
 ```bash
@@ -337,7 +335,7 @@ docker-compose restart mysql
 
 ---
 
-## ??? Development
+## 💻 Development
 
 ### Running Tests
 ```bash
@@ -391,7 +389,7 @@ dotnet publish src/Presentation/Presentation.csproj -c Release -o ./publish
 
 ---
 
-## ?? Troubleshooting
+## 🔧 Troubleshooting
 
 ### Issue: Port Already in Use
 
@@ -498,7 +496,7 @@ docker exec civic_integrity_hub_api ping mysql
 
 ---
 
-## ?? Testing the API
+## 🧪 Testing the API
 
 ### Using cURL
 ```bash
@@ -532,7 +530,7 @@ Invoke-RestMethod -Uri http://localhost:5000/api/health/connection
 
 ---
 
-## ?? Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -551,11 +549,11 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
-## ?? Development Roadmap
+## 🗓️ Development Roadmap
 
 See [ProblemStatement.md](./ProblemStatement.md) for the complete development roadmap and feature timeline.
 
-### Current Status: Week 1 ?
+### Current Status: Week 1 ✅
 - [x] Basic API structure with Clean Architecture
 - [x] Docker containerization with docker-compose
 - [x] MySQL 8.0 integration
@@ -580,7 +578,7 @@ See [ProblemStatement.md](./ProblemStatement.md) for the complete development ro
 
 ---
 
-## ?? Additional Resources
+## 📚 Additional Resources
 
 - [ASP.NET Core Documentation](https://docs.microsoft.com/aspnet/core)
 - [Entity Framework Core](https://docs.microsoft.com/ef/core)
@@ -590,21 +588,21 @@ See [ProblemStatement.md](./ProblemStatement.md) for the complete development ro
 
 ---
 
-## ?? License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## ?? Contact
+## 📧 Contact
 
 **Victor Mahluza** - [@VMahluza](https://github.com/VMahluza)
 
-**Project Link:** [https://github.com/VMahluza/CivicIntegrityHub](https://github.com/VMahluza/CivicIntegrityHub)
+**Project Link:** [https://github.com/VMahluza/PublicCorruptionReportingPlatform](https://github.com/VMahluza/PublicCorruptionReportingPlatform)
 
 ---
 
-## ?? Acknowledgments
+## 🙏 Acknowledgments
 
 - Inspired by South Africa's anti-corruption initiatives
 - [Corruption Watch South Africa](https://www.corruptionwatch.org.za)
@@ -613,8 +611,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## ? Support
+## ⭐ Support
 
 If you find this project helpful, please consider giving it a star on GitHub!
 
-**Built with ?? for transparency and accountability in South Africa**
+**Built with ❤️ for transparency and accountability in South Africa**
