@@ -20,7 +20,6 @@ This repository hosts the Civic Integrity Hub API, an initiative to empower citi
 - [🔧 Troubleshooting](#-troubleshooting)
 - [🧪 Testing the API](#-testing-the-api)
 - [🤝 Contributing](#-contributing)
-- [🗓️ Development Roadmap](#️-development-roadmap)
 - [📚 Additional Resources](#-additional-resources)
 - [📄 License](#-license)
 - [📧 Contact](#-contact)
@@ -164,10 +163,10 @@ PublicCorruptionReportingPlatform/
 The application uses environment variables for configuration. These are defined in `src/Infrastructure/.env`:
 
 ```env
-MYSQL_ROOT_PASSWORD=12345StrongPwd!
-MYSQL_DATABASE=civic_integrity_hub_db
+MYSQL_ROOT_PASSWORD=12*****wd!
+MYSQL_DATABASE=civi******_db
 MYSQL_USER=Victor
-MYSQL_PASSWORD=12345StrongPwd!
+MYSQL_PASSWORD=12*******wd!
 MYSQL_PORT=3306
 ```
 
@@ -182,7 +181,7 @@ MYSQL_PORT=3306
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;Database=civic_integrity_hub_db;User=Victor;Password=12345StrongPwd!;"
+    "DefaultConnection": "Server=localhost;Port=3306;Database=ci*****y_hub_db;User=Victor;Password=12******wd!;"
   }
 }
 ```
@@ -190,7 +189,7 @@ MYSQL_PORT=3306
 **Production (Docker):**
 Environment variable override:
 ```
-ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=civic_integrity_hub_db;User=Victor;Password=12345StrongPwd!;
+ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=civic_*****db;User=Victor;Password=123******gPwd!;
 ```
 
 ---
@@ -242,7 +241,7 @@ Returns masked connection string for troubleshooting (password hidden).
 **Response:**
 ```json
 {
-  "connectionString": "Server=mysql;Port=3306;Database=civic_integrity_hub_db;User=Victor;Password=****;",
+  "connectionString": "Server=mysql;Port=3306;Database=civi*****ub_db;User=Victor;Password=****;",
   "environment": "Production"
 }
 ```
@@ -546,35 +545,6 @@ Contributions are welcome! Please follow these steps:
 - Add XML documentation comments for public APIs
 - Write unit tests for new features
 - Keep controllers thin, business logic in services
-
----
-
-## 🗓️ Development Roadmap
-
-See [ProblemStatement.md](./ProblemStatement.md) for the complete development roadmap and feature timeline.
-
-### Current Status: Week 1 ✅
-- [x] Basic API structure with Clean Architecture
-- [x] Docker containerization with docker-compose
-- [x] MySQL 8.0 integration
-- [x] Health check endpoints
-- [x] Swagger/OpenAPI documentation
-- [x] Environment-based configuration (.env support)
-
-### Next Steps: Week 2
-- [ ] Entity models (User, Report, Department, Category)
-- [ ] EF Core setup with migrations
-- [ ] CRUD endpoints for corruption reports
-- [ ] JWT authentication and authorization
-- [ ] Data validation with Data Annotations
-
-### Future Enhancements
-- [ ] CQRS + MediatR pattern
-- [ ] File upload for evidence
-- [ ] Public dashboard with anonymized stats
-- [ ] Integration tests
-- [ ] CI/CD pipeline with GitHub Actions
-- [ ] Azure/AWS deployment
 
 ---
 
