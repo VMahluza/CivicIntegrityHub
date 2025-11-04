@@ -1,4 +1,4 @@
-﻿namespace Domain.Entities.Common;
+﻿namespace Domain.Common;
 public abstract class AuditableEntity
 {
     public Guid Id { get; private set; }

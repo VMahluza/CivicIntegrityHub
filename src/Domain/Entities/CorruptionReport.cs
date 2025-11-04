@@ -1,4 +1,4 @@
-﻿using Domain.Entities.Common;
+﻿using Domain.Common;
 using Domain.Enums;
 namespace Domain.Entities;
 public class CorruptionReport : AuditableEntity
