@@ -23,10 +23,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Domain\" />
     <Folder Include="Infrastructure\" />
     <Folder Include="Application\" />
     <Folder Include="Presentation\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
 </Project>

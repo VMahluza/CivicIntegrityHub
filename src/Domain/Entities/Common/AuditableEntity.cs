@@ -2,10 +2,10 @@
 public abstract class AuditableEntity
 {
     public Guid Id { get; private set; }
-    public DateTime Created { get; set; }
-    public Guid CreatedBy { get; set; } = Guid.NewGuid();
-    public DateTime? LastModified { get; set; }
-    public Guid? LastModifiedBy { get; set; }
+    public DateTime Created { get; private set; }
+    public Guid CreatedBy { get; private set; } 
+    public DateTime? LastModified { get; private set; }
+    public Guid? LastModifiedBy { get; private set; }
 
     protected AuditableEntity() { }
 
